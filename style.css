@@ -1,0 +1,197 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: clamp(16px, 1vw, 24px);
+  line-height: 1.6;
+  background-color: #5A6772;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.banner {
+  background-color: #3fa9f5;
+  color: #ffffff;
+  padding: clamp(12px, 0.8vw, 24px) clamp(16px, 1.1vw, 32px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.banner-left h1 {
+  font-size: clamp(32px, 2.1vw, 48px);
+}
+
+.banner-right {
+  display: flex;
+  gap: clamp(8px, 0.5vw, 16px);
+}
+
+.nav-button {
+  text-decoration: none;
+  color: #ffffff;
+  padding: clamp(8px, 0.5vw, 16px) clamp(16px, 1.1vw, 32px);
+  border-radius: 8px;
+  background-color: #1a75d2;
+  font-size: clamp(16px, 1vw, 24px);
+}
+
+.nav-button:hover {
+  background-color: #145ea8;
+}
+
+.contact-button {
+  background-color: #1a75d2;
+}
+
+main.main-content {
+  flex: 1 0 auto;
+  padding: clamp(24px, 1.7vw, 48px) 0;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+#projects {
+  background-color: #5A6772;
+  padding: clamp(24px, 1.7vw, 48px) clamp(32px, 2.2vw, 100px);
+}
+
+#projects h2,
+.section h2,
+.section h3 {
+  font-size: clamp(24px, 1.6vw, 36px);
+  padding-bottom: clamp(8px, 0.5vw, 16px);
+  color: #3fa9f5;
+}
+
+#projects h2 {
+  text-align: center;
+  font-size: clamp(32px, 2.1vw, 48px);
+  margin-top: clamp(16px, 1vw, 32px);
+  margin-bottom: clamp(16px, 1vw, 32px);
+}
+
+.case-studies-container {
+  display: flex;
+  justify-content: space-between;
+  gap: clamp(16px, 1.1vw, 50px);
+  flex-wrap: nowrap;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.case-study {
+  flex: 0 0 5.9vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.image-placeholder {
+  width: 17.5vw;
+  height: 17.5vw;
+  background-color: #ccc;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-size: clamp(16px, 1vw, 24px);
+  margin-bottom: clamp(8px, 0.5vw, 16px);
+}
+
+.case-study h3 {
+  font-size: clamp(18px, 1.1vw, 28px);
+  margin: clamp(4px, 0.3vw, 8px) 0;
+  color: #3fa9f5;
+}
+
+.case-study p {
+  font-size: clamp(16px, 1vw, 24px);
+  color: #ffffff;
+}
+
+a {
+  color: #ffffff;
+}
+
+.main-content a {
+  color: #3fa9f5;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+footer.banner {
+  flex-shrink: 0;
+  justify-content: center;
+  text-align: center;
+  padding: clamp(12px, 0.8vw, 24px) clamp(16px, 1.1vw, 32px);
+  flex-direction: column;
+}
+
+.case-study-link {
+  text-decoration: none;
+  color: inherit;
+  flex: 0 0 calc((1920px - 4*50px)/3);
+}
+
+.case-study-link .case-study {
+  cursor: pointer;
+}
+
+.section {
+  margin-bottom: clamp(24px, 1.7vw, 48px);
+}
+
+.section p,
+.section ul,
+.bullet-container p {
+  max-width: 1000px;
+  margin: 0 auto clamp(8px, 0.5vw, 16px);
+  text-align: left;
+}
+
+.graph-image {
+  max-width: 800px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  margin: clamp(8px, 0.5vw, 16px) 0 clamp(16px, 1vw, 32px) 0;
+}
+
+.image-summary {
+  max-width: 800px;
+  margin: clamp(8px, 0.5vw, 16px) auto clamp(16px, 1vw, 32px) auto;
+  font-size: clamp(16px, 1vw, 24px);
+  text-align: center;
+}
+
+.footnote {
+  font-size: clamp(12px, 0.7vw, 16px);
+  color: #ffffff;
+  margin-top: 0.2rem;
+}
+
+.banner-left a.home-link {
+  text-decoration: none !important;
+  color: inherit;
+}
+
+.home-link h1 {
+  margin: 0;
+}

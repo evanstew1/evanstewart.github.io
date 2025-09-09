@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Evan Stewart | UX Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Inline styles for responsive text scaling */
+    body {
+      font-size: clamp(16px, 1vw, 24px);
+    }
+    .main-content div[style*="font-size: 1.2rem;"] {
+      font-size: clamp(16px, 1vw, 20px);
+    }
+    .banner-left h1 {
+      font-size: clamp(32px, 2.1vw, 48px);
+    }
+    .nav-button {
+      font-size: clamp(16px, 1vw, 24px);
+    }
+    #projects h2 {
+      font-size: clamp(32px, 2.1vw, 48px);
+    }
+    .case-study h3 {
+      font-size: clamp(18px, 1.2vw, 32px);
+    }
+    .case-study p {
+      font-size: clamp(16px, 1vw, 24px);
+    }
+  </style>
+</head>
+<body>
+  <!-- Top Banner -->
+  <header class="banner">
+    <div class="banner-left">
+      <h1>Evan Stewart</h1>
+    </div>
+    <nav class="banner-right">
+      <a href="projects.html" class="nav-button">Projects</a>
+      <a href="about.html" class="nav-button">About Me</a>
+      <a href="contact.html" class="nav-button contact-button">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <!-- About Summary -->
+    <div style="display: flex; justify-content: center;">
+  <div style="max-width: 1100px; width: 100%; font-size: clamp(16px, 1.1vw, 24px); text-align: center;">
+    <p style="margin-bottom: -2.5rem;">I’m a product manager/designer passionate about creating user-centered experiences. I enjoy improving frustrating interfaces and turning insights into actionable features. Projects like CSSearch let me combine research, prototyping, and design to build intuitive, visually compelling solutions.</p>
+  </div>
+</div>
+
+
+
+    <!-- Projects / Case Studies -->
+    <section id="projects">
+      <h2>Case Studies</h2>
+      <div class="case-studies-container">
+
+        <!-- Project 1 -->
+        <a href="project1.html" class="case-study-link">
+          <div class="case-study">
+            <img src="CSSearchLogo1.png" alt="CS Search Logo" class="image-placeholder">
+            <h3>CS Search</h3>
+            <p>CS Search is a Chrome Extension designed to enhace the CS2 Steam Community Makret experience, featuring a sidebar menu with key seasrch filters for more streamlined navigation.</p>
+          </div>
+        </a>
+
+        <!-- Project 2 -->
+        <a href="project2.html" class="case-study-link">
+          <div class="case-study">
+            <img src="UCIAALogo1.png" alt="CS Search Logo" class="image-placeholder">
+            <h3>Anteater Atlas</h3>
+            <p>A quarter long, 8 person class project, we tackled the problem of scattered resources at UC Irvine. My role was Prodcut Manager and Designer for the High-Fidelity Mockup.</p>
+          </div>
+        </a>
+
+        <!-- Project 3 -->
+        <a href="project3.html" class="case-study-link">
+          <div class="case-study">
+            <img src="SteamRedesignLogo.png" alt="CS Search Logo" class="image-placeholder">
+            <h3>SCM Redesign</h3>
+            <p>A practice project where I reimaged the Steam Community Market interface based on user feedback and competitive analysis, focused on improving navigation, accessibility, and browsing for CS2 items.</p>
+          </div>
+        </a>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Bottom Banner / Contact -->
+  <footer class="banner" id="contact">
+    <p>Email: <a href="mailto:evanstew1@gmail.com">evanstew1@gmail.com</a> | 
+     GitHub: <a href="https://github.com/evanstew1" target="_blank">github.com/evanstew1</a> | 
+     LinkedIn: <a href="https://www.linkedin.com/in/evan-stewart-b2b1532aa/" target="_blank">linkedin.com/in/evan-stewart</a>
+    </p>
+  </footer>
+</body>
+</html>
