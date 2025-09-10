@@ -269,10 +269,13 @@ footer.banner {
   margin-right: 0;
 }
 
-/* --- Mobile / Small Screens (600px and below) --- */
+/*Mobile*/
 @media (max-width: 600px) {
   .section {
-    padding: 0rem;
+    padding-left: 1rem; 
+    padding-right: 1rem;
+    padding-top: 0rem;       /* keep top padding 0 */
+    padding-bottom: 0rem;    /* keep bottom padding 0 */
     margin-bottom: 1.5rem;
   }
 
@@ -359,7 +362,7 @@ footer.banner {
   }
 
   .contact-item {
-    display: block;      /* stack */
+    display: block;
     margin: 0.2rem 0;
   }
 
