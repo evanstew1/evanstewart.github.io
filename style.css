@@ -270,7 +270,6 @@ footer.banner {
 /* --- Mobile / Small Screens (600px and below) --- */
 @media (max-width: 600px) {
   .section {
-    padding: 1rem;
     margin-bottom: 1.5rem;
   }
 
@@ -283,6 +282,10 @@ footer.banner {
   .section h3 {
     font-size: 1.8rem;
     padding-bottom: 0.5rem;
+  }
+
+   #projects h2 {
+    margin-top: 2rem;
   }
 
   .section p,
@@ -361,3 +364,4 @@ footer.banner {
     content: "";         /* remove "|" */
   }
 }
+
