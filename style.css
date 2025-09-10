@@ -66,7 +66,7 @@ main.main-content {
 #projects h2,
 .section h2,
 .section h3 {
-  font-size: clamp(24px, 1.6vw, 36px);
+  font-size: clamp(24px, 2.5vw, 50px);
   padding-bottom: clamp(8px, 0.5vw, 16px);
   color: #3fa9f5;
 }
@@ -109,7 +109,7 @@ main.main-content {
 }
 
 .case-study h3 {
-  font-size: clamp(18px, 1.1vw, 28px);
+  font-size: clamp(18px, 1.3vw, 28px);
   margin: clamp(4px, 0.3vw, 8px) 0;
   color: #3fa9f5;
 }
@@ -252,13 +252,15 @@ footer.banner {
 .case-study img,
 .case-study .image-placeholder,
 .case-study .clickable-image {
-  width: 100%;
-  aspect-ratio: 1 / 1;
+  width: clamp(200px, 17.5vw, 400px);  /* min 200px, 17.5vw, max 336px (~17.5vw of 1920px) */
+  height: clamp(200px, 17.5vw, 400px); /* keep square */
   object-fit: cover;
   display: block;
+  margin: 0 auto clamp(8px, 0.5vw, 16px);
   border-radius: 8px;
-  margin-bottom: clamp(8px, 0.5vw, 16px);
 }
+
+
 
 .case-study h3,
 .case-study p {
@@ -270,7 +272,12 @@ footer.banner {
 /* --- Mobile / Small Screens (600px and below) --- */
 @media (max-width: 600px) {
   .section {
+    padding: 0rem;
     margin-bottom: 1.5rem;
+  }
+
+  #projects h2 {
+    margin-top: 2rem; /* adjust as needed */
   }
 
   .banner-right {
@@ -280,12 +287,8 @@ footer.banner {
 
   .section h2,
   .section h3 {
-    font-size: 1.8rem;
+    font-size: 2rem;
     padding-bottom: 0.5rem;
-  }
-
-   #projects h2 {
-    margin-top: 2rem;
   }
 
   .section p,
@@ -364,4 +367,3 @@ footer.banner {
     content: "";         /* remove "|" */
   }
 }
-
