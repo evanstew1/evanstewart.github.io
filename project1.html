@@ -1,104 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
-<!--Head -->
 <head>
-    <meta charset="UTF-8">
-    <meta name="author" content="Evan Stewart">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Evan Stewart | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CS Search | Evan Stewart</title>
+  <link rel="stylesheet" href="style.css">
 </head>
-<!--Body CONTAINS header, div to combine aside and main, and a footer -->
 <body>
-<header id="top">
+  <!-- Top Banner -->
+  <header class="banner">
     <div class="banner-left">
-        <a href="index.html" class="home-link">
-            <h1>Evan Stewart</h1>
-        </a>
+      <a href="index.html" class="home-link"><h1>Evan Stewart</h1></a>
     </div>
+
     <nav class="banner-right">
-        <a href="index.html" class="nav-button">Projects</a>
-        <a href="about.html" class="nav-button">About Me</a>
-        <a href="resume.html" class="nav-button">Resume</a>
+      <a href="index.html#projects" class="nav-button">Projects</a>
+      <a href="index.html#about" class="nav-button">About Me</a>
+      <a href="index.html#contact" class="nav-button contact-button">Contact</a>
     </nav>
-	<a href="#top" class="top-page">↑</a>
-</header>
-<!-- side-main holds both the aside section aswell as the main section -->
-<div class ="side-main-container">
-<!-- Hamburger menu checkbox put here-->
-<input type="checkbox" id="menu-toggle" class="checkMenu">
-<label for="menu-toggle" class="hamburger">&#9776;</label>
-<!-- Aside is a nav menu -->
-<aside class="sidebar">
-    <ul>
-        <li><a href="#problem">The Problem</a></li>
-        <li><a href="#design-goals">Design Goals</a></li>
-        <li><a href="#wireframes">Wireframes</a></li>
-        <li><a href="#implementation">Implementation</a></li>
-        <li><a href="#results">Results</a></li>
-        <li><a href="#conclusion">Conclusion</a></li>
-    </ul>
-</aside>
-<!-- Main contains information and pictures about the project -->
-<main class="project-body">
-        <h2 class="project-header">CS Search Chrome Extension</h2>
-		<img class="modal-img" src="images/CSSearch-Result.png" alt="Finished Product">
+  </header>
 
-		<p>CS Search is a redesigned interface for the Steam Community Market that reduces clicks, improves search efficiency, and highlights commonly used features.</p>
-
-		<section id="problem">
-			<h3>The Problem</h3>
-			<p>Steam’s Community Market for CS2 feels outdated compared to modern third-party marketplaces. Its search menu requires significantly more keystrokes and clicks to complete the same tasks, creating friction and slowing users down. This inefficiency makes performing frequent searches unnecessarily difficult for power users, often driving them to alternative marketplaces.</p>
-			<p>To better understand these pain points, active CS2 investors and traders were surveyed. Their feedback highlighted frustrations with the current search interface and emphasized a need for streamlined access to commonly used features, such as search autofill, advanced sticker search for applied stickers, and applied charm search.</p>
-		</section>
-
-		<section id="design-goals">
-			<h3>Design Goals</h3>
-			<ul>
-				<li>Reduce the number of clicks and keystrokes for frequent searches</li>
-				<li>Showcase commonly used features while keeping the interface familiar</li>
-				<li>Maintain visual consistency with the current Steam Community Market design</li>
-			</ul>
-		</section>
-
-		<section id="wireframes">
-			<h3>Wireframes</h3>
-			<img class="modal-img" src="images/CSSearch-WireFrame.png" alt="Wireframe">
-			<p>Initial wireframes outlining the redesigned menu structure and key user flows. The design emphasizes accessibility, streamlined navigation, and intuitive placement of common features.</p>
-		</section>
-
-		<section id="implementation">
-			<h3>Implementation</h3>
-			<img class="modal-img" src="images/CSSearch-Homepage.png" alt="Implementation Screenshot">
-			<p>The redesigned menu was built using HTML and JavaScript, styled to match the Steam Community Market’s existing color palette and menu patterns for a seamless look. Subtle accent colors inspired by CS2 were added to help users quickly distinguish common elements. The new menu remains accessible at all times, offering instant search with autofill, as well as direct support for applied sticker and charm searches.</p>
-		</section>
-
-		<section id="results">
-			<h3>Results</h3>
-			<h4>Efficiency Improvements</h4>
-			<img class="modal-img" src="images/CSSearch-Graph.png" alt="Efficiency Graph">
-            <p>The SCM required 16 total interactions (7 clicks, 9 keystrokes), while CS Search reduced this to 10 total interactions (4 clicks, 6 keystrokes) — a 37.5% overall reduction*. This demonstrates a significant efficiency improvement for frequent searches.</p>
-			<p class="footnote">*Search for AK-47 Redline, FT, MW, Normal</p>
-		</section>
-
-		<section id="conclusion">
-			<h3>Conclusion</h3>
-			<p>Through research, design, and development, the new search menu transforms the Steam Community Market into a more efficient tool. With fewer interactions required, it removes friction from frequent searches and creates a smoother, more productive user experience.</p>
-		</section>
-</main>
-</div>
-<!--Footer CONTAINS links to email, github, and linkedin -->
-<footer>
-    <div>
-        <a href="mailto:evanstew1@gmail.com">Email Me</a>
-        <a href="https://github.com/evanstew1" target="_blank">Github Profile</a>
-        <a href="https://www.linkedin.com/in/evan-stewart-b2b1532aa/" target="_blank">LinkedIn Profile</a>
+<main class="main-content">
+  <!-- Finished Product at Top -->
+  <section class="section finished-product">
+    <h2 class="responsive-header">CS Search</h2>
+    <div class="image-container">
+      <img src="CSSearch-Result.png" alt="Finished Product" class="clickable-image" 
+           style="max-width:1000px; height:auto; cursor: zoom-in;">
     </div>
-</footer>
-<!--Modal-->
-<div class="modal">
-    <img class="modal-content" src="images/placeholder.png" alt="modal">
+    <p class="image-summary">
+      CS Search is a redesigned interface for the Steam Community Market that reduces clicks, improves search efficiency, and highlights commonly used features.
+    </p>
+  </section>
+
+  <section class="section" id="problem">
+    <h3>The Problem</h3>
+    <p>
+      Steam’s Community Market for CS2 feels outdated compared to modern third-party marketplaces. Its search menu requires significantly more keystrokes and clicks to complete the same tasks, creating friction and slowing users down. This inefficiency makes performing frequent searches unnecessarily difficult for power users, often driving them to alternative marketplaces.
+    </p>
+    <p>
+      To better understand these pain points, active CS2 investors and traders were surveyed. Their feedback highlighted frustrations with the current search interface and emphasized a need for streamlined access to commonly used features, such as search autofill, advanced sticker search for applied stickers, and applied charm search.
+    </p>
+  </section>
+
+  <section class="section" id="design-goals">
+    <h3>Design Goals</h3>
+    <div class="bullet-container">
+      <p>• Reduce the number of clicks and keystrokes for frequent searches</p>
+      <p>• Showcase commonly used features while keeping the interface familiar</p>
+      <p>• Maintain visual consistency with the current Steam Community Market design</p>
+    </div>
+  </section>
+
+  <section class="section" id="wireframes">
+    <h3>Wireframes</h3>
+    <div class="image-container">
+      <img src="CSSearch-WireFrame.png" alt="Wireframe" class="clickable-image" 
+           style="max-width:1000px; height:auto; cursor: zoom-in;">
+    </div>
+    <p>Initial wireframes outlining the redesigned menu structure and key user flows. The design emphasizes accessibility, streamlined navigation, and intuitive placement of common features.</p>
+  </section>
+
+  <section class="section" id="implementation">
+    <h3>Implementation</h3>
+    <div class="image-container">
+      <img src="CSSearch-Homepage.png" alt="Finished Product" class="clickable-image" 
+           style="max-width:1000px; height:auto; cursor: zoom-in;">
+    </div>
+    <p>
+      The redesigned menu was built using HTML and JavaScript, styled to match the Steam Community Market’s existing color palette and menu patterns for a seamless look. Subtle accent colors inspired by CS2 were added to help users quickly distinguish common elements. The new menu remains accessible at all times, offering instant search with autofill, as well as direct support for applied sticker and charm searches.
+    </p>
+  </section>
+
+  <section class="section" id="results">
+    <h3>Results</h3>
+
+    <h4>Efficiency Improvements</h4>
+    <!-- Efficiency Graph -->
+    <div class="image-container">
+      <img src="CSSearch-Graph.png" alt="Finished Product" class="clickable-image graph-image" 
+          style="max-width:1000px; height:auto; cursor: zoom-in;">
+    </div>
+    <p>The SCM required 16 total interactions (7 clicks, 9 keystrokes), while CS Search reduced this to 10 total interactions (4 clicks, 6 keystrokes) — a 37.5% overall reduction<sup>*</sup>. This demonstrates a significant efficiency improvement for frequent searches.</p>
+    <p class="footnote"><sup>*</sup>Search for AK-47 Redline, FT, MW, Normal</p>
+
+    <h4>Old vs New Menu</h4>
+    <!-- Old vs New Menu -->
+    <div class="image-container">
+      <img src="CSSearch-Comp.png" alt="Old vs New Menu" class="clickable-image"  
+          style="max-width:1000px; height:auto; cursor: zoom-in;">
+    </div>
+    <p>Users still have access to all the specialized features in the old menu, but for most common searches, the new menu provides a more streamlined and efficient experience. This allows both new and advanced users to navigate the system comfortably without compromise.</p>
+    <p class="footnote"><sup>*</sup>Zoomed in at 150%</p>
+  </section>
+
+
+
+  <section class="section" id="conclusion">
+    <h3>Conclusion</h3>
+    <p>
+      Through research, design, and development, the new search menu transforms the Steam Community Market into a more efficient tool. With fewer interactions required, it removes friction from frequent searches and creates a smoother, more productive user experience.
+    </p>
+  </section>
+</main>
+
+<!-- Reusable modal (one per page) -->
+<div id="modal" style="display:none; position:fixed; z-index:1000; left:0; top:0; width:100%; height:100%; background:rgba(0,0,0,0.8); justify-content:center; align-items:center; cursor: zoom-out;">
+  <img id="modal-img" style="max-width:90%; max-height:90%;">
 </div>
-<script src="script.js"></script>
-</body>
-</html>
+
+<script>
+const modal = document.getElementById('modal');
+const modalImg = document.getElementById('modal-img');
+
+// Make any image with class "clickable-image" open the modal
+document.querySelectorAll('.clickable-image').forEach(img => {
+  img.addEventListener('click', () => {
+    modal.style.display = 'flex';
+    modalImg.src = img.src;
+  });
+});
+
+// Clicking anywhere closes the modal
+modal.addEventListener('click', () => {
+  modal.style.display = 'none';
+});
+</script>
+
+<!-- Footer -->
+<footer class="banner">
+  <p>
+    <span class="contact-item">Email: evanstew1@gmail.com</span>
+    <span class="contact-item">GitHub: github.com/evanstew1</span>
+    <span class="contact-item">LinkedIn: linkedin.com/in/evan-stewart</span>  
+  </p>
+</footer>
