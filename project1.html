@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--Head -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Evan Stewart">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evan Stewart | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<!--Body CONTAINS header, div to combine aside and main, and a footer -->
+<body>
+<header id="top">
+    <div class="banner-left">
+        <a href="index.html" class="home-link">
+            <h1>Evan Stewart</h1>
+        </a>
+    </div>
+    <nav class="banner-right">
+        <a href="index.html" class="nav-button">Projects</a>
+        <a href="about.html" class="nav-button">About Me</a>
+        <a href="resume.html" class="nav-button">Resume</a>
+    </nav>
+</header>
+<!-- side-main holds both the aside section aswell as the main section -->
+<div class ="side-main-container">
+<!-- Hamburger menu checkbox put here-->
+<input type="checkbox" id="menu-toggle" class="checkMenu">
+<label for="menu-toggle" class="hamburger">&#9776;</label>
+<!-- Aside is a nav menu -->
+<aside class="sidebar">
+    <ul>
+		<li><a href="#cssearch">CS Search</a></li>
+        <li><a href="#problem">The Problem</a></li>
+        <li><a href="#design-goals">Design Goals</a></li>
+        <li><a href="#wireframes">Wireframes</a></li>
+        <li><a href="#implementation">Implementation</a></li>
+		<li><a href="#iteration">Iteration</a></li>
+        <li><a href="#results">Results</a></li>
+        <li><a href="#conclusion">Conclusion</a></li>
+    </ul>
+</aside>
+<!-- Main contains information and pictures about the project -->
+<main class="project-body">
+        <h2 section id ="cssearch" class="project-header">CS Search</h2>
+		<img class="modal-img" src="images/CSSearch-ShowV2.png" alt="Finished Product">
+
+		<p>CS Search is a <strong>browser extension</strong> designed to eliminate search friction on the Steam Community Market. Now in Version 2.0, the redesigned interface centralizes common filters in an accessible layout, significantly improving interaction speed for power users.</p>
+		<section id="problem">
+			<h3>The Problem</h3>
+			<p>Steam’s Community Market for CS2 feels outdated compared to modern third-party marketplaces. Its search menu requires significantly more keystrokes and clicks to complete the same tasks, creating friction and slowing users down. This inefficiency makes performing frequent searches unnecessarily difficult for power users, often driving them to alternative marketplaces.</p>
+			<p>To better understand these pain points, active CS2 investors and traders were surveyed. Their feedback highlighted frustrations with the current search interface and emphasized a need for streamlined access to commonly used features and an easier way to search for applied stickers and charms.</p>
+		</section>
+
+		<section id="design-goals">
+			<h3>Design Goals</h3>
+			<ul>
+				<li>Reduce the number of clicks and keystrokes for frequent searches</li>
+				<li>Showcase commonly used features while keeping the interface familiar</li>
+				<li>Maintain visual consistency with the current Steam Community Market design</li>
+			</ul>
+		</section>
+
+		<section id="wireframes">
+			<h3>Wireframes</h3>
+			<img class="modal-img" src="images/CSSearch-WireFrame.png" alt="Wireframe">
+			<p>Initial wireframes outlining the redesigned menu structure and key user flows. The design emphasizes accessibility, streamlined navigation, and intuitive placement of common features.</p>
+		</section>
+
+		<section id="implementation">
+			<h3>Implementation</h3>
+			<p>
+				The redesigned menu was built using HTML and JavaScript, styled to match the Steam Community Market’s existing 
+				color palette and menu patterns for a seamless look. Accent colors inspired by other CS2 marketplaces were 
+				added to help users quickly distinguish common elements. Unlike the native version, which hides search 
+				parameters behind a menu, CS Search takes advantage of available screen real estate by 
+				remaining persistent and fully visible. This eliminates unnecessary clicks and keeps all tools accessible at all times. 
+			</p>
+			<p>
+				Furthermore, I streamlined the search process for applied stickers/charms by offering direct support for a search bar for this. A feature that is poorly implemented in both versions of the SCM, where it is either hidden behind a manual quote-based query and an additional button, or restricted by a forced category search, which the user may not want.
+			</p>		
+			</p>
+		</section>
+
+		<section id="Iteration">
+			<h3>Iteration: From Version 1.0 to Version 2.0</h3>
+			<img class="modal-img" src="images/CSSearch_VersionComp.png" alt ="Version 1 compared to Version 2 of CS Search">
+			<p>After months of regular use as well as the release of a new beta from steam for the first time in years which added new features. I conducted a expert review of Version 1.0
+				of CS Search and identified interactions that could be improved as well as redesigned the menu to be more space efficient.
+			</p>
+			<p>The insights gained from my initial version led to the development of <strong>Version 2.0</strong>, which focuses on three primary areas of refinement:</p>
+			<ul>
+				<li><strong>Eliminating Redundancy:</strong> My initial version included a custom search bar with autofill. However, when Steam updated the Community Market with a autofill feature, I pivoted my design to avoid redundancy. I integrated my specialized filters directly into the built-in search bar, creating a more seamless and less cluttered experience.</li>
+				
+				<li><strong>Spatial Optimization:</strong> To reclaim screen real estate, I <strong>consolidated checkbox menus into a multi-column layout</strong>. By placing filters side-by-side rather than stacking them vertically, I significantly reduced the UI footprint. I also streamlined the sticker and charm search logic by consolidating multiple input fields into a single, efficient query string. Additionally, I moved the menu to a fixed, central location to ensure consistent accessibility.</li>
+				
+				<li><strong>New Features:</strong> Version 2.0 introduces the 'Quality' (Rarity) filter, which was omitted from the initial version due to space constraints. By replacing long checkbox lists with <strong>collapsible dropdown menus</strong>, I was able to include these essential categories without overwhelming the user or cluttering the interface.</li>
+			</ul>
+		</section>
+
+		<section id="results">
+			<h3>Results</h3>
+			<h4>Efficiency Improvements</h4>
+			<img class="modal-img" src="images/CSSearch-Graph.png" alt="Efficiency Graph">
+    
+			<p>
+				To quantify the impact of the interface, I conducted a series of controlled benchmarking tests measuring <strong>Task Completion Time (TCT)</strong>. The test scenario involved a complex, multi-parameter search, <strong>"AK-47/Rifle, Redline, Field-Tested, Minimal Wear & Normal"</strong>, which requires several filtering steps.
+			</p>
+
+			<p>
+				While the SCM Beta successfully reduces search time compared to the legacy market, the 
+				results from <strong>CS Search</strong> prove that there were still significant 
+				efficiency gains to be made over the native version. By restructuring the layout to place 
+				the most common filters in a high-density, intuitive grid, I eliminated the need for 
+				repetitive scrolling and UI refreshes. This streamlined navigation allowed for a further 
+				<strong>47.5% reduction in task time</strong>, capturing efficiency that standard 
+				version had yet to unlock. Furthermore, CS Search outperformed established 
+				third-party marketplaces, demonstrating that its specialized design significantly 
+				reduces friction for power users during high-frequency searches.
+			</p>
+		</section>
+
+		<section id="conclusion">
+    <h3>Conclusion</h3>
+    <p>
+        The development of <strong>CS Search</strong> evolved through an iterative process, moving from an initial version to a highly optimized <strong>v2.0</strong>. By analyzing interaction bottlenecks in both the legacy market and the new SCM Beta, I was able to transform the search experience into a precision tool for power users.
+    </p>
+    <p>
+        The final design successfully reduced task completion time by <strong>47.5%</strong> compared to native benchmarks. The result of this project is a more productive, lower-friction workflow that keeps users integrated within the Steam ecosystem while providing cutting-edge search speed.
+    </p>
+</section>
+</main>
+</div>
+<!--Footer CONTAINS links to email, github, and linkedin -->
+<footer>
+    <div>
+        <a href="mailto:evanstew1@gmail.com">Email Me</a>
+        <a href="https://github.com/evanstew1" target="_blank">Github Profile</a>
+        <a href="https://www.linkedin.com/in/evan-stewart-b2b1532aa/" target="_blank">LinkedIn Profile</a>
+    </div>
+</footer>
+<!--Modal-->
+<div class="modal">
+    <img class="modal-content" src="images/placeholder.png" alt="modal">
+</div>
+<script src="script.js"></script>
+</body>
+</html>

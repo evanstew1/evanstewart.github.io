@@ -1,0 +1,637 @@
+:root {
+  /* Main Brand Colors */
+  --brand-blue: #3fa9f5;      /* Header/Accents */
+  --brand-blue-dark: #1a75d2; /* Button Blue */
+  --brand-blue-hover: #145ea8;
+  --brand-blue-alt: #297bb6;
+
+  /* Backgrounds */
+  --bg-main: #1e293b;         /* Deep Slate Blue (Replaces the muddy grey) */
+  --bg-sidebar: #334155;      /* Lighter Slate for the Sidebar */
+  --bg-modal: rgba(0, 0, 0, 0.8);
+
+  /* Text Colors */
+  --text-white: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+html {
+  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+}
+
+body {
+  font-family: "PT Serif", Arial, sans-serif;
+  font-size: clamp(16px, 1.2vw, 22px);
+  line-height: 1.6;
+  background-color: var(--bg-main);
+  color: var(--text-white);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/*Header*/
+header {
+  background-color: var(--brand-blue);
+  color: var(--text-white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: clamp(12px, 1vw, 24px) clamp(16px, 2vw, 32px);
+  
+  /* THIS IS THE KEY */
+  position: sticky; 
+  top: 0;           /* You must tell it where to stop */
+  z-index: 1000;    /* Ensures it stays on top of images/sidebar */
+  width: 100%;      
+}
+
+.banner-left h1 {
+  font-size: clamp(2rem, 2vw, 3rem);
+}
+
+.banner-left a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.banner-right {
+  display: flex;
+  gap: clamp(8px, 1vw, 16px);
+}
+
+.nav-button {
+  text-decoration: none;
+  color: var(--text-white);
+  padding: clamp(6px, 0.5vw, 12px) clamp(12px, 1vw, 24px);
+  border-radius: 8px;
+  background-color: var(--brand-blue-dark);
+  font-size: clamp(1rem, 1.2vw, 1.5rem);
+  transition: background-color 0.2s ease;
+}
+
+.nav-button:hover {
+  background-color: var(--brand-blue-hover);
+}
+
+main {
+  flex: 1 0 auto;
+  padding: clamp(24px, 2.5vw, 48px);
+  margin: 0;
+}
+
+.about-summary{
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-summary h2 {
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--brand-blue);
+}
+
+.about-summary p {
+  font-size: clamp(1rem, 1.2vw, 1.5rem);
+  line-height: 1.5;
+}
+
+/*Projects Grid*/
+.projects h2 {
+  text-align: center;
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+  color: var(--brand-blue);
+}
+
+.project-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-self: center;
+  gap: 6.5vw;
+  max-width: 90vw;
+  margin: 0;
+}
+
+.project-grid a {
+  text-decoration: none;
+  color: inherit;
+  flex: 1 1 17vw;
+  
+  min-width: 200px;
+  max-width: 450px;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.project-card img {
+  width: 100%;
+  max-width: clamp(200px, 17vw, 500px);
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover img {
+    transform: scale(1.05);
+}
+
+.project-card h3 {
+  font-size: clamp(1.2rem, 2vw, 2rem);
+  margin-bottom: 0.5rem;
+  color: var(--brand-blue);
+}
+
+.project-card p {
+  font-size: clamp(1rem, 1.2vw, 1.5rem);
+  color: var(--text-white);
+  line-height: 1.4;
+  width: 120%;
+  max-width: 500px;
+}
+
+.project-card figcaption{
+    max-width: 23vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 0 auto;
+}
+
+/*Projects1/2/3*/
+.side-main-container {
+    display: flex;
+    gap: 3vw;
+    justify-content: center;
+    padding: 16px;
+    align-items: flex-start;
+}
+
+.project-header {
+    font-size: clamp(16px, 2.5vw, 48px);
+    text-align: center;
+    color: var(--brand-blue);
+}
+
+
+#link {
+  display: block;
+  margin: 0.5rem auto;
+  max-width: 300px;
+  text-align: center;
+  font-size: clamp(16px, 2vw, 32px);
+  color: var(--brand-blue);
+  font-weight: bold;
+}
+
+main.project-body {
+    max-width:clamp(550px, 50vw, 1000px);
+    margin: 0;
+    justify-content: center;
+    padding: 0 !important;
+    
+}
+
+.project-body [id] {
+    scroll-margin-top: 200px; /* Adjust this number to match your banner height */
+}
+
+.project-body img {
+    /* 1. Spacing */
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    
+    /* 2. Layout & Centering */
+    display: block; /* Use block instead of flex for standard image behavior */
+    margin-left: auto;
+    margin-right: auto;
+    
+    /* 3. The "True Size" Logic */
+    width: auto; /* Keeps it at original pixel width */
+    max-width: 100%; /* Only shrinks if the container is smaller than the image */
+    
+    /* 4. Constraints */
+    /* Removed clamp because it forces scaling. If you want a limit, use max-width: 1000px instead */
+    max-height: 70vh; /* Increased slightly to give your vertical menu breathing room */
+    object-fit: contain; /* Prevents stretching if height limit is hit */
+    
+    /* 5. Clarity Boosters */
+    image-rendering: -webkit-optimize-contrast; /* Sharpens text in PNGs */
+    shape-rendering: crispEdges;
+}
+
+.project-body h3{
+    font-size: clamp(16px, 1.5vw, 32px);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    color: var(--brand-blue);
+}
+
+.project-body p{
+    width: clamp(550px, 50vw, 1000px);
+    margin-bottom: 20px;
+}
+
+.project-body ul{
+    padding-left: 1.5rem;
+}
+
+.footnote {
+    font-size: clamp(12px, 1.2vw, 18px);
+}
+
+#conclusion,
+#outcome,
+#reflection{
+  padding-bottom: 5vh;
+}
+
+.about {
+  width: clamp(300px, 60vw, 1000px);
+  margin: 0 auto;
+  
+}
+
+.about h2 {
+  color: var(--brand-blue);
+  text-align: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.about h3 {
+  color: var(--brand-blue);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.about ul {
+  padding-left: 1.6rem;
+}
+
+.resume-container {
+    max-width: 1000px;
+    width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 1.5rem;
+}
+
+.resume-down {
+    display: flex;
+    justify-content: right;
+    padding-bottom: 1.5rem;
+}
+
+.resume-container img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+}
+
+.download-button {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.6rem 1rem;
+    background-color: var(--brand-blue-dark);
+    color: var(--text-white);
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: clamp(12px, 1vw, 18px);
+    transition: background-color 0.2s ease, transform 0.2s ease;
+    cursor: pointer;
+}
+
+.download-button:hover {
+    background-color: var(--brand-blue-hover);
+}
+
+.sidebar {
+  position: fixed;
+  align-items: center;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 5vw;
+  background-color: var(--bg-sidebar);
+  padding: 1.5rem;
+  width: 170px;
+  border-radius: 1rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+
+}
+
+.sidebar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar li {
+  padding-top: 0.5rem;
+  padding-bottom:  0.5rem;
+}
+
+.sidebar a {
+  display: inline-block;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-right: 0.5rem;
+  color: var(--text-white);
+  text-decoration: none;
+  font-size: 1rem;
+
+}
+
+.sidebar a:hover {
+  color: var(--brand-blue);
+  text-decoration: underline;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+
+.top-page {
+  position: fixed;
+  bottom: 10vh;
+  left: 5vw;
+  transform: translateX(calc(75px - 2vh));
+  background-color: var(--brand-blue-dark);
+  border-radius: 50%;
+  width: 5vh;
+  height: 5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3vh;
+  color: var(--text-white);
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.top-page:hover {
+  background-color: var(--brand-blue-alt);
+  /*Move up slightly*/
+  transform: translateX(calc(75px - 2vh)) translateY(-20%) scale(1.1);
+}
+
+
+/*Footer*/
+footer {
+  background-color: var(--brand-blue);
+  color: var(--text-white);
+  text-align: center;
+  padding: clamp(12px, 1vw, 24px);
+}
+
+footer div {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* Allows them to move to next line if needed */
+  /* Fluid gap: gets smaller as the screen shrinks */
+  gap: clamp(10px, 3vw, 40px); 
+}
+
+footer a {
+  color: var(--text-white);
+  text-decoration: none;
+  margin: 0 0.5rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/*Hamburger menu*/
+/*hide checkbox*/
+.checkMenu {
+  display: none;
+}
+
+.hamburger {
+  /*display: none*/
+  display: none;
+  position: fixed;
+  top: calc(4vw + 60px);
+  left: 5vw;
+  width: 4.5vh;
+  height: 4.5vh;
+  background-color: var(--brand-blue-dark);
+  color: var(--text-white);
+  font-size: 2.5vh;
+  justify-content: center;
+  border-radius: 8px;
+  align-items: center;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.3);
+}
+
+/*Tablets
+Just the projects page needs changed*/
+@media(max-width: 1120px){
+
+  .top-page {
+    padding: 0rem;
+    left: 2rem;
+    transform: translateX(0);
+    bottom: 4rem;
+  }
+
+  .hamburger {
+    display: flex;
+    left: 2rem;
+  }
+
+  .sidebar{
+    display: none;
+    left: 2rem;
+  }
+
+  .checkMenu:checked ~ .sidebar {
+    display: flex;
+  }
+
+  .top-page:hover {
+  background-color: var(--brand-blue-alt);
+  /*Move up slightly for visual effect*/
+  transform: translateX(0) translateY(0) scale(1.1);
+  }
+  .project-body h3 {
+    font-size: 20px;
+  }
+
+}
+
+/*Mobile*/
+@media (max-width: 825px) {
+
+  main.project-body {
+    max-width:90vw;
+  }
+
+  /* Add this to hide the hamburger and the sidebar toggle logic on mobile */
+  .hamburger {
+    display: none !important; 
+  }
+
+  /* Hide the Back to Top arrow */
+  .top-page {
+    display: none !important;
+  }
+
+  .sidebar {
+    display: none !important;
+  }
+
+  .project-grid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-grid a {
+    flex: 1 1 90%;
+    max-width: 90%;
+  }
+
+  .project-grid h3 {
+    width: 50vw;
+  }
+
+  .project-grid p{
+    width: 80vw;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .banner-right {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .project-body {
+    width: 90vw;
+    padding-right: 16px;
+  }
+
+  .project-body img{
+    max-width: 90vw;
+    max-height: 60vh;
+  }
+
+  .project-body p {
+    width: 90vw;
+  }
+
+  .project-header{
+    font-size: clamp(25px, 3vw, 32px);
+  }
+
+  .about h2 {
+    padding-top: 0rem;
+    text-align: center;
+  }
+
+
+  .banner-left h1 {
+    font-size: clamp(1.5rem, 6vw, 2.5rem);
+  }
+
+  .nav-button {
+    font-size: clamp(1rem, 3vw, 1.2rem);
+    padding: clamp(4px, 1vw, 8px) clamp(8px, 2vw, 16px);
+  }
+
+  .sidebar {
+    width: 120px;
+    padding: 0.6rem;
+  }
+
+  .sidebar a {
+    font-size: 14px;
+    padding-right: 0;
+  }
+
+  .hamburger {
+    background-color: var(--brand-blue-dark);
+    top: 40px;
+    left: 1.5rem;
+  }
+
+  .top-page {
+    left: 1.5rem;
+  }
+
+  .home-link h1 {
+    font-size: 2rem;
+  }
+
+  footer div {
+    display: flex;
+    flex-direction: row; /* Keep them horizontal */
+    flex-wrap: nowrap;    /* Prevents the 2-1 "wrap" you saw earlier */
+    justify-content: center;
+    align-items: center;
+    /* This creates a tiny gap that shrinks with the screen */
+    gap: clamp(5px, 2vw, 15px); 
+    width: 100%;
+  }
+
+  footer a {
+    /* Reduce font size slightly so the text physically fits */
+    font-size: clamp(12px, 3vw, 16px);
+    /* Remove the large horizontal padding that was pushing them apart */
+    padding-left: 0;
+    padding-right: 0;
+    margin: 0;
+    white-space: nowrap; /* Keeps "Email Me" on one line */
+  }
+}
+
+/*Modal*/
+.modal {
+  display: none; /*kept coming up on site openeing without this*/
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: var(--bg-modal);
+  
+}
+
+.modal-content {
+  margin: auto;
+  max-width: 90%;
+  max-height: 80vh;
+}
+
+.modal-img {
+      cursor: pointer;
+}

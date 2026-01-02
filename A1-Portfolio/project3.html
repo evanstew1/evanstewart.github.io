@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<!--Head -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Evan Stewart">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evan Stewart | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<!--Body CONTAINS header, div to combine aside and main, and a footer -->
+<body>
+<header id="top">
+    <div class="banner-left">
+        <a href="index.html" class="home-link">
+            <h1>Evan Stewart</h1>
+        </a>
+    </div>
+    <nav class="banner-right">
+        <a href="index.html" class="nav-button">Projects</a>
+        <a href="about.html" class="nav-button">About Me</a>
+        <a href="contact.html" class="nav-button">Contact</a>
+    </nav>
+	<a href="#top" class="top-page">↑</a>
+</header>
+<!-- side-main holds both the aside section aswell as the main section -->
+<div class ="side-main-container">
+<!-- Hamburger menu checkbox put here-->
+<input type="checkbox" id="menu-toggle" class="checkMenu">
+<label for="menu-toggle" class="hamburger">&#9776;</label>
+<!-- Aside is a nav menu -->
+<aside class="sidebar">
+    <ul>
+		<li><a href="#overview">Overview</a></li>
+		<li><a href="#research">Research</a></li>
+		<li><a href="#key-insights">Key Insights</a></li>
+	    <li><a href="#wireframe">Process in Figma</a></li>
+	    <li><a href="#reflection">Reflection</a></li>
+	</ul>
+</aside>
+<!-- Main contains information and pictures about the project -->
+<main class="project-body">
+<h2 class="project-header">SCM Redesign</h2>
+			<img class="modal-img" src="images/SCM-Ex.png" alt="Finished Product">
+
+			<section id="overview">
+				<h3>Overview</h3>
+				<p>As a practice project, this redesign allowed me to refine my research, wireframing, and Figma skills while exploring practical product design solutions. I focused on the Steam Community Market, addressing usability challenges and pain points for CS2 items, the platform’s largest category.</p>
+			</section>
+
+			<section id="research">
+				<h3>Research</h3>
+				<p>• <strong>User Surveys:</strong> Collected input from traders and investors in CS2 to uncover frustrations with the current marketplace and desired features.</p>
+				<p>• <strong>Competitive Analysis:</strong> Conducted an analysis of the Steam Community Market alongside third-party market competitors to identify missing features and layout inspiration.</p>
+				<div class="image-container">
+					<img class="modal-img" src="images/Competitive-Analysis-1.png" alt="Competitive Analysis">
+				</div>
+			</section>
+
+			<section id="key-insights">
+				<h3>Key Insights</h3>
+				<p>The Key Insights that guided my design decisions were as follows:</p>
+				<div class="bullet-container">
+					<p>• <strong>Navigation:</strong> Wanted to be able to click a button and not navigate menus to switch pages</p>
+					<p>• <strong>Item Browsing:</strong> Desired increased filter options like price and float</p>
+					<p>• <strong>Sorting:</strong> Users wanted a clear and easy-to-use sorting button with better criteria</p>
+					<p>• <strong>Autofill:</strong> Users wanted to autofill item names instead of typing them fully</p>
+				</div>
+			</section>
+
+			<section id="wireframe">
+				<h3>Process in Figma</h3>
+				<div class="image-container">
+					<img class="modal-img" src="images/SCM-Mid-Home.png" alt="SCM Mid-Fidelity Home">
+				</div>
+				<p>I began by manually translating the Steam background and key interface elements into my wireframe. Next, I designed a mid-fidelity menu.</p>
+				<div class="image-container">
+					<img class="modal-img" src="images/SCM-Hifi_Home.png" alt="SCM High-Fidelity Home">
+				</div>
+				<p>Afterwards, I added high-level detail to the mid-fidelity wireframe to create a high-fidelity wireframe for prototyping.</p>
+			</section>
+
+			<section id="reflection">
+				<h3>Reflection</h3>
+				<p>This practice project gave me valuable experience in problem-solving, user research, applying design heuristics, and refining my Figma workflow. It also inspired my Chrome Extension CS Search, providing insights that informed my design.</p>
+				<div class="image-container">
+					<img class="modal-img" src="images/SCM-All.png" alt="SCM All Pages">
+				</div>
+				<p class="footnote">*Zoomed-out view of 25 wireframe pages, showcasing mid-fidelity exploration and high-fidelity designs for the homepage and search screens.</p>
+			</section>
+</main>
+</div>
+<!--Footer CONTAINS links to email, github, and linkedin -->
+<footer>
+    <div>
+        <a href="mailto:evanstew1@gmail.com">Email Me</a>
+        <a href="https://github.com/evanstew1" target="_blank">Github Profile</a>
+        <a href="https://www.linkedin.com/in/evan-stewart-b2b1532aa/" target="_blank">LinkedIn Profile</a>
+    </div>
+</footer>
+<!--Modal-->
+<div class="modal">
+    <img class="modal-content" src="images/placeholder.png" alt="modal">
+</div>
+<script src="script.js"></script>
+</body>
+</html>

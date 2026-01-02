@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Head -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Evan Stewart">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evan Stewart | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<!--Body CONTAINS header, div to combine aside and main, and a footer -->
+<body>
+<header id="top">
+    <div class="banner-left">
+        <a href="index.html" class="home-link">
+            <h1>Evan Stewart</h1>
+        </a>
+    </div>
+    <nav class="banner-right">
+        <a href="index.html" class="nav-button">Projects</a>
+        <a href="about.html" class="nav-button">About Me</a>
+        <a href="resume.html" class="nav-button">Resume</a>
+    </nav>
+</header>
+<!-- side-main holds both the aside section aswell as the main section -->
+<div class ="side-main-container">
+<!-- Hamburger menu checkbox put here-->
+<input type="checkbox" id="menu-toggle" class="checkMenu">
+<label for="menu-toggle" class="hamburger">&#9776;</label>
+<!-- Aside is a nav menu -->
+<aside class="sidebar">
+	<ul>
+		<li><a href="#Atlas">UCI Anteater Atlas</a></li>
+		<li><a href="#overview">Overview</a></li>
+		<li><a href="#my-role">My Role</a></li>
+		<li><a href="#task-flows">Task and User Flows</a></li>
+		<li><a href="#key-insights">Key Insights</a></li>
+		<li><a href="#prototype">High Fidelity Prototype</a></li>
+		<li><a href="#outcome">Outcome</a></li>
+	</ul>
+</aside>
+<!-- Main contains information and pictures about the project -->
+<main class="project-body">
+<h2 section id = "Atlas" class="project-header">UCI Anteater Atlas</h2>
+			<img class="modal-img" src="images/UCIAA-Homepage.png" alt="Finished Product">
+			<a id="link" href="https://sites.google.com/uci.edu/anteater-atlas/home?authuser=1"  target="_blank">
+				Project Website
+			</a>
+
+			<section id="overview">
+				<h3>Overview</h3>
+				<p>UCI Anteater Atlas was a quarter-long project where we identified a campus-wide problem and designed a digital solution to address it. My team created Anteater Atlas, a centralized resource platform for UCI students designed to simplify access to academic, research, and mental health resources through a clean, user-friendly interface. Throughout the process, we created User Flows, Wireframes, Mockups, and a Figma Protype. Then all of this was displayed on my team's project website.</p>
+			</section>
+
+			<section id="my-role">
+				<h3>My Role</h3>
+				<div class="bullet-container">
+					<p>• <strong>Coordinated the team</strong> by scheduling group meetings and structuring the workflow</p>
+					<p>• <strong>Synthesized research insights</strong> by compiling user interviews and identifying key themes</p>
+					<p>• <strong>Set design priorities</strong> by determining the key features of the platform</p>
+					<p>• <strong>Created Task and User Flows</strong> from interview insights</p>
+					<p>• <strong>Contributed to the High Fidelity Designs</strong> in Figma and ensured visual consistency</p>
+				</div>
+			</section>
+
+			<section id="task-flows">
+				<h3>Task and User Flows</h3>
+				<div class="image-container">
+					<img class="modal-img" src="images/UCIAAFlows1.png" alt="Task and User Flows">
+				</div>
+				<p>I created the task and user flows to demonstrate how users might interact with Anteater Atlas. These flows highlighted common use patterns that would help us guide our design decisions. Making sure we had all the appropriate pages and error prevention/backtracking options for seamless navigation. These task and user flows ensured that the team could create an intuitive experience for users.</p>
+			</section>
+
+			<section id="key-insights">
+				<h3>Key Insights</h3>
+				<div class="image-container">
+					<img class="modal-img" src="images/UCIAA-KeyInsights.png" alt="Key Insights">
+				</div>
+				<p>
+ To uncover the primary pain points of the student experience, I conducted some of the teams one-on-one user interviews and performed a qualitative analysis of the interview data collected by my teammates. By synthesizing these notes, I identified recurring themes in student behavior and preferences, which allowed me to narrow our focus to four key insights. To ensure our design was grounded in real-world needs, I extracted direct quotes from the participants to validate our findings and guide our feature prioritization.				</p>
+			</section>
+
+			<section id="prototype">
+				<h3>High Fidelity Prototype</h3>
+				<div class="image-container">
+					<img class="modal-img" src="images/UCIAA-ToolsAndPortals.png" alt="High Fidelity Prototype">
+				</div>
+				<p class="footnote"><sup>*</sup>Example of the resouce page designed for mobile.</p>
+				<p>I contributed to several core pages of the high-fidelity mockup, focusing on maintaining visual consistency across the platform. My work involved translating our established style guide and component library into functional layouts, ensuring that typography and spacing remained uniform with the sections designed by my teammates. I focused on optimizing the information hierarchy of the resource modules, making sure that the most vital information was accessible at a glance without cluttering the mobile view.</p>
+				
+			</section>
+
+			<section id="outcome">
+				<h3>Outcome</h3>
+				<p>By the end of the quarter, we delivered both a high-fidelity and interactive prototype that centralized UCI’s academic resources into one hub. A platform that was easy to navigate and allowed the user to easily find what resources they were looking for without scouring across many webpages.</p>
+			</section>
+</main>
+</div>
+<!--Footer CONTAINS links to email, github, and linkedin -->
+<footer>
+    <div>
+        <a href="mailto:evanstew1@gmail.com">Email Me</a>
+        <a href="https://github.com/evanstew1" target="_blank">Github Profile</a>
+        <a href="https://www.linkedin.com/in/evan-stewart-b2b1532aa/" target="_blank">LinkedIn Profile</a>
+    </div>
+</footer>
+<!--Modal-->
+<div class="modal">
+    <img class="modal-content" src="images/placeholder.png" alt="modal">
+</div>
+<script src="script.js"></script>
+</body>
+</html>
