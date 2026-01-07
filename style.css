@@ -95,13 +95,14 @@ main {
 .about-summary{
   max-width: 1100px;
   margin: 0 auto;
-  padding-top: -10px;
+  padding-top: -5px;
   text-align: center;
 }
 
 .about-summary h2 {
   font-size: clamp(2rem, 4vw, 3rem);
   color: var(--brand-blue);
+  margin-bottom: 1rem !important;
 }
 
 .about-summary p {
