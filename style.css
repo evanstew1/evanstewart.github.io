@@ -102,12 +102,15 @@ main {
 .about-summary h2 {
   font-size: clamp(2rem, 4vw, 3rem);
   color: var(--brand-blue);
-  margin-bottom: 1rem !important;
 }
 
 .about-summary p {
   font-size: clamp(1rem, 1.2vw, 1.5rem);
   line-height: 1.5;
+}
+
+.about-summary .project h2{
+  margin-bottom: 1rem !important;
 }
 
 /*Projects Grid*/
