@@ -94,7 +94,8 @@ main {
 
 .about-summary{
   max-width: 1100px;
-  margin: -20px auto;
+  margin: 0 auto;
+  padding-top: -10px;
   text-align: center;
 }
 
